@@ -241,7 +241,7 @@ Aguardo o contato!`
             {products.map((product, index) => (
               <div key={index} className="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <img src={
-    product.section === "Whey Protein Premium"
+    product.name === "Whey Protein Premium"
       ? "https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000"
       : product.image
   } 
