@@ -239,7 +239,7 @@ Aguardo o contato!`
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
