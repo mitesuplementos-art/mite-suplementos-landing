@@ -211,7 +211,7 @@ Aguardo o contato!`
               <MessageCircle className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Consultoria Personalizada</h3>
-            <p className="text-gray-600">Atendimento exclusivo via WhatsApp com especialistas em suplementação</p>
+            <p className="text-black-600">Atendimento exclusivo via WhatsApp com especialistas em suplementação</p>
           </div>
           <div>
             <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
