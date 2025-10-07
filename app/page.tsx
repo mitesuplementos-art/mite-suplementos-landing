@@ -243,7 +243,7 @@ Aguardo o contato!`
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <p className="text-white-600 mb-4">{product.description}</p>
                   <ul className="space-y-2 mb-6">
                     {product.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm">
