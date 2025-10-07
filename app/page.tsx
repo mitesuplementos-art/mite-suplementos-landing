@@ -1,12 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { 
   MessageCircle, Shield, Users, Star, CheckCircle, Phone, Mail, Clock, Zap, Heart, ArrowRight, Menu, X 
 } from 'lucide-react'
-
-import Logo from '../images/logo.svg'
+import Image from 'next/image'
 
 interface FormData {
   name: string
@@ -33,11 +31,13 @@ export default function SupplementsLanding() {
     experience: ''
   })
 
+  // Carregar dados do localStorage
   useEffect(() => {
     const savedData = localStorage.getItem('supplementsFormData')
     if (savedData) setFormData(JSON.parse(savedData))
   }, [])
 
+  // Salvar dados no localStorage
   useEffect(() => {
     localStorage.setItem('supplementsFormData', JSON.stringify(formData))
   }, [formData])
@@ -49,7 +49,7 @@ export default function SupplementsLanding() {
 
   const handleWhatsAppConsultation = () => {
     const message = `Olá! Gostaria de agendar uma consultoria personalizada.
-
+    
 Meus dados:
 Nome: ${formData.name}
 Email: ${formData.email}
@@ -124,16 +124,17 @@ Aguardo o contato!`
   ]
 
   return (
-    <div className="min-h-screen bg-[#F0F5E5]">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-[#F0F5E5] shadow-sm sticky top-0 z-50">
+      <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Image src={Logo} alt="Logo" className="h-8 w-8" />
+              <Image src="/images/logo.svg" alt="Logo VitalSupp" width={32} height={32} />
               <span className="ml-2 text-xl font-bold text-gray-900">VitalSupp</span>
             </div>
-            
+
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               <a href="#produtos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Produtos</a>
               <a href="#consultoria" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Consultoria</a>
@@ -141,6 +142,7 @@ Aguardo o contato!`
               <a href="#depoimentos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Depoimentos</a>
             </nav>
 
+            {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#6B7C32]"
@@ -149,6 +151,7 @@ Aguardo o contato!`
             </button>
           </div>
 
+          {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t">
               <div className="flex flex-col space-y-4">
@@ -164,43 +167,45 @@ Aguardo o contato!`
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#6B7C32] to-[#5A6B2A] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Suplementação
-              <span className="block text-[#B8E986]">Inteligente</span>
-            </h1>
-            <p className="text-xl mb-8 text-gray-100">
-              Consultoria personalizada via WhatsApp para maximizar seus resultados com a suplementação ideal.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={() => document.getElementById('consultoria')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-[#6B7C32] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Consultoria Gratuita
-              </button>
-              <button 
-                onClick={() => document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6B7C32] transition-colors"
-              >
-                Ver Produtos
-              </button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Suplementação
+                <span className="block text-[#B8E986]">Inteligente</span>
+              </h1>
+              <p className="text-xl mb-8 text-gray-100">
+                Consultoria personalizada via WhatsApp para maximizar seus resultados com a suplementação ideal para seu objetivo.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button 
+                  onClick={() => document.getElementById('consultoria')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-white text-[#6B7C32] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Consultoria Gratuita
+                </button>
+                <button 
+                  onClick={() => document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6B7C32] transition-colors"
+                >
+                  Ver Produtos
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
-              alt="Suplementos de qualidade"
-              className="rounded-2xl shadow-2xl"
-            />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-              <div className="flex items-center">
-                <Shield className="h-8 w-8 text-[#6B7C32] mr-3" />
-                <div>
-                  <p className="font-semibold text-gray-900">100% Seguro</p>
-                  <p className="text-sm text-gray-600">Produtos certificados</p>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
+                alt="Suplementos de qualidade"
+                className="rounded-2xl shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                <div className="flex items-center">
+                  <Shield className="h-8 w-8 text-[#6B7C32] mr-3" />
+                  <div>
+                    <p className="font-semibold text-gray-900">100% Seguro</p>
+                    <p className="text-sm text-gray-600">Produtos certificados</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -209,33 +214,254 @@ Aguardo o contato!`
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 text-center">
-          <div>
-            <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <MessageCircle className="h-8 w-8 text-white" />
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageCircle className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Consultoria Personalizada</h3>
+              <p className="text-gray-600">Atendimento exclusivo via WhatsApp com especialistas em suplementação</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Consultoria Personalizada</h3>
-            <p className="text-gray-700">Atendimento exclusivo via WhatsApp com especialistas em suplementação</p>
-          </div>
-          <div>
-            <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap className="h-8 w-8 text-white" />
+            <div className="text-center">
+              <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Resultados Rápidos</h3>
+              <p className="text-gray-600">Protocolos eficazes baseados em ciência para acelerar seus objetivos</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Resultados Rápidos</h3>
-            <p className="text-gray-700">Protocolos eficazes baseados em ciência para acelerar seus objetivos</p>
-          </div>
-          <div>
-            <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="h-8 w-8 text-white" />
+            <div className="text-center">
+              <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Qualidade Garantida</h3>
+              <p className="text-gray-600">Produtos premium com certificação internacional e pureza testada</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Qualidade Garantida</h3>
-            <p className="text-gray-700">Produtos premium com certificação internacional e pureza testada</p>
           </div>
         </div>
       </section>
 
-      {/* Aqui continuam as seções Produtos, Consultoria, Artigos, Depoimentos, CTA, Footer com o mesmo esquema */}
+      {/* Products Section */}
+      <section id="produtos" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Nossos Produtos Premium
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Selecionamos apenas os melhores suplementos do mercado para garantir resultados excepcionais
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {product.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-[#6B7C32] mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full bg-[#6B7C32] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
+                    Consultar Preço
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation Form Section */}
+      <section id="consultoria" className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Consultoria Gratuita via WhatsApp
+            </h2>
+            <p className="text-xl text-gray-600">
+              Preencha o formulário e receba uma orientação personalizada para seus objetivos
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Nome Completo *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6B7C32] focus:border-transparent"
+                    placeholder="Seu nome completo"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6B7C32] focus:border-transparent"
+                    placeholder="seu@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    WhatsApp *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6B7C32] focus:border-transparent"
+                    placeholder="(11) 99999-9999"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Experiência com Suplementos
+                  </label>
+                  <select
+                    name="experience"
+                    value={formData.experience}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6B7C32] focus:border-transparent"
+                  >
+                    <option value="">Selecione...</option>
+                    <option value="iniciante">Iniciante</option>
+                    <option value="intermediario">Intermediário</option>
+                    <option value="avancado">Avançado</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Qual seu principal objetivo? *
+                </label>
+                <textarea
+                  name="goal"
+                  value={formData.goal}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6B7C32] focus:border-transparent"
+                  placeholder="Ex: Ganhar massa muscular, perder peso, melhorar performance..."
+                  required
+                />
+              </div>
+
+              <button
+                type="button"
+                onClick={handleWhatsAppConsultation}
+                disabled={!formData.name || !formData.email || !formData.phone || !formData.goal}
+                className="w-full bg-[#25D366] text-white py-4 rounded-lg font-semibold hover:bg-[#20BA5A] transition-colors flex items-center justify-center disabled:bg-gray-400 disabled:cursor-not-allowed"
+              >
+                <MessageCircle className="h-5 w-5 mr-2" />
+                Enviar via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles Section */}
+      <section id="artigos" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Artigos Recentes</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Conteúdo relevante para te ajudar a escolher os melhores suplementos e potencializar resultados
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {articles.map((article, idx) => (
+              <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow p-6">
+                <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+                <p className="text-gray-600 mb-4">{article.excerpt}</p>
+                <p className="text-sm text-gray-400">{article.readTime}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="depoimentos" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Depoimentos</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Veja como nossos clientes alcançaram resultados reais com a consultoria personalizada
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((t, idx) => (
+              <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <p className="text-gray-600 mb-4">"{t.text}"</p>
+                <div className="flex items-center mb-2">
+                  {[...Array(t.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="font-semibold text-gray-900">{t.name}</p>
+                <p className="text-sm text-gray-500">{t.result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <Image src="/images/logo.svg" alt="Logo VitalSupp" width={32} height={32} />
+            <p className="mt-4 text-gray-400">Consultoria e suplementos de qualidade para maximizar seus resultados.</p>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contato</h4>
+            <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> (11) 99999-9999</p>
+            <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> contato@mitesuplementos.com.br</p>
+            <p className="flex items-center gap-2"><Clock className="h-4 w-4" /> Seg-Sex 08:00-18:00</p>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
+            <div className="flex space-x-4">
+              <a href="#" className="hover:text-[#6B7C32] transition-colors">Instagram</a>
+              <a href="#" className="hover:text-[#6B7C32] transition-colors">Facebook</a>
+              <a href="#" className="hover:text-[#6B7C32] transition-colors">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <div className="text-center text-gray-500 mt-8">© 2025 Mite Suplementos. Todos os direitos reservados.</div>
+      </footer>
     </div>
   )
 }
