@@ -208,21 +208,21 @@ Aguardo o contato!`
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
             <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <MessageCircle className="h-8 w-8 text-white" />
+              <MessageCircle className="h-8 w-8 text-black" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Consultoria Personalizada</h3>
-            <p className="text-black-600">Atendimento exclusivo via WhatsApp com especialistas em suplementação</p>
+            <p className="text-gray-600">Atendimento exclusivo via WhatsApp com especialistas em suplementação</p>
           </div>
           <div>
             <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap className="h-8 w-8 text-white" />
+              <Zap className="h-8 w-8 text-black" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Resultados Rápidos</h3>
             <p className="text-gray-600">Protocolos eficazes baseados em ciência para acelerar seus objetivos</p>
           </div>
           <div>
             <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="h-8 w-8 text-white" />
+              <Shield className="h-8 w-8 text-black" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Qualidade Garantida</h3>
             <p className="text-gray-600">Produtos premium com certificação internacional e pureza testada</p>
