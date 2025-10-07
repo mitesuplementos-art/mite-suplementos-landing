@@ -240,7 +240,9 @@ Aguardo o contato!`
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <div key={index} className="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img src="https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000" alt={product.name} className="w-full h-48 object-cover" />
+                <img src={product.name === "Whey Protein DUX"
+        ? "https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000"
+        : product.image}  alt={product.name} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                   <p className="text-white-600 mb-4">{product.description}</p>
