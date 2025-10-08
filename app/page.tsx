@@ -150,10 +150,10 @@ Aguardo o contato!`
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t">
               <div className="flex flex-col space-y-4">
-                <a href="#produtos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Produtos</a>
-                <a href="#consultoria" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Consultoria</a>
-                <a href="#artigos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Artigos</a>
-                <a href="#depoimentos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Depoimentos</a>
+                <a href="#produtos" className="text-gray-700 hover:text-[#97E622] transition-colors">Produtos</a>
+                <a href="#consultoria" className="text-gray-700 hover:text-[#97E622] transition-colors">Consultoria</a>
+                <a href="#artigos" className="text-gray-700 hover:text-[#97E622] transition-colors">Artigos</a>
+                <a href="#depoimentos" className="text-gray-700 hover:text-[#97E622] transition-colors">Depoimentos</a>
               </div>
             </div>
           )}
@@ -174,7 +174,7 @@ Aguardo o contato!`
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => document.getElementById('consultoria')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-[#6B7C32] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                className="bg-white text-[#97E622] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
               >
                 <MessageCircle className="mr-2 h-5 w-5" /> Consultoria Gratuita
               </button>
@@ -193,7 +193,7 @@ Aguardo o contato!`
               className="rounded-2xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg flex items-center">
-              <Shield className="h-8 w-8 text-[#6B7C32] mr-3" />
+              <Shield className="h-8 w-8 text-[#97E622] mr-3" />
               <div>
                 <p className="font-semibold text-gray-900">100% Seguro</p>
                 <p className="text-sm text-gray-600">Produtos certificados</p>
@@ -207,21 +207,21 @@ Aguardo o contato!`
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
-            <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-[#97E622] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <MessageCircle className="h-8 w-8 text-black" />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-black">Consultoria Personalizada</h3>
             <p className="text-gray-600">Atendimento exclusivo via WhatsApp com especialistas em suplementação</p>
           </div>
           <div>
-            <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-[#97E622] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Zap className="h-8 w-8 text-black" />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-black">Resultados Rápidos</h3>
             <p className="text-gray-600">Protocolos eficazes baseados em ciência para acelerar seus objetivos</p>
           </div>
           <div>
-            <div className="bg-[#6B7C32] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-[#97E622] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="h-8 w-8 text-black" />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-black">Qualidade Garantida</h3>
@@ -260,11 +260,11 @@ Aguardo o contato!`
                   <ul className="space-y-2 mb-6">
                     {product.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-[#6B7C32] mr-2" /> {benefit}
+                        <CheckCircle className="h-4 w-4 text-[#97E622] mr-2" /> {benefit}
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-[#6B7C32] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
+                  <button className="w-full bg-[#97E622] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
                     Consultar Preço
                   </button>
                 </div>
