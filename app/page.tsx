@@ -310,7 +310,7 @@ Aguardo o contato!`
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Qual seu principal objetivo? *</label>
-                <textarea name="goal" value={formData.goal} onChange={handleInputChange} rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6B7C32] focus:border-transparent" placeholder="Ex: Ganhar massa muscular, perder peso, melhorar performance..." required />
+                <textarea name="goal" value={formData.goal} onChange={handleInputChange} rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6B7C32] focus:border-transparent text-black" placeholder="Ex: Ganhar massa muscular, perder peso, melhorar performance..." required />
               </div>
               <button type="button" onClick={handleWhatsAppConsultation} disabled={!formData.name || !formData.email || !formData.phone || !formData.goal} className="w-full bg-[#25D366] text-white py-4 rounded-lg font-semibold hover:bg-[#20BA5A] transition-colors flex items-center justify-center disabled:bg-gray-400 disabled:cursor-not-allowed">
                 <MessageCircle className="mr-2 h-5 w-5" /> Iniciar Consultoria no WhatsApp
