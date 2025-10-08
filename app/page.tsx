@@ -142,7 +142,7 @@ Aguardo o contato!`
             </nav>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#6B7C32]"
+              className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#97E622]"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -347,7 +347,7 @@ Aguardo o contato!`
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-2xl shadow-lg p-6">
               <div className="flex items-center mb-4">
-                <div className="bg-[#6B7C32] w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg">{testimonial.name.charAt(0)}</div>
+                <div className="bg-[#97E622] w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg">{testimonial.name.charAt(0)}</div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                   <div className="flex">
@@ -356,14 +356,14 @@ Aguardo o contato!`
                 </div>
               </div>
               <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
-              <span className="text-[#6B7C32] font-semibold">{testimonial.result}</span>
+              <span className="text-[#97E622] font-semibold">{testimonial.result}</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#6B7C32] text-white text-center">
+      <section className="py-20 bg-[#97E622] text-white text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">Pronto para alcançar seus objetivos?</h2>
         <p className="text-xl mb-8">Agende sua consultoria gratuita e descubra como a suplementação certa pode transformar seus resultados.</p>
         <button onClick={() => document.getElementById('consultoria')?.scrollIntoView({ behavior: 'smooth' })} className="bg-white text-[#6B7C32] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Iniciar Consultoria</button>
@@ -378,7 +378,7 @@ Aguardo o contato!`
           </div>
           <div>
             <h4 className="font-bold text-white mb-4">Contato</h4>
-            <p className="flex items-center"><Phone className="h-4 w-4 mr-2" /> (11) 99999-9999</p>
+            <p className="flex items-center"><Phone className="h-4 w-4 mr-2" /> (85) 98937-2995</p>
             <p className="flex items-center"><Mail className="h-4 w-4 mr-2" /> contato@mitesuplementos.com.br</p>
           </div>
           <div>
