@@ -69,7 +69,7 @@ Aguardo o contato!`
       name: "Whey Protein Premium",
       description: "Proteína de alta qualidade para ganho de massa muscular",
       image: "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&h=300&fit=crop",
-      benefits: ["25g de proteína por dose", "Absorção rápida", "Sabores naturais"]
+      benefits: ["21g de proteína por dose", "Alta Saciedade", "Sabores Exclusivos"]
     },
     {
       name: "Creatina Creapure",
@@ -135,10 +135,10 @@ Aguardo o contato!`
               <span className="ml-2 text-xl font-bold text-gray-900">Mite Suplementos</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#produtos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Produtos</a>
-              <a href="#consultoria" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Consultoria</a>
-              <a href="#artigos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Artigos</a>
-              <a href="#depoimentos" className="text-gray-700 hover:text-[#6B7C32] transition-colors">Depoimentos</a>
+              <a href="#produtos" className="text-gray-700 hover:text-[#97E622] transition-colors">Produtos</a>
+              <a href="#consultoria" className="text-gray-700 hover:text-[#97E622] transition-colors">Consultoria</a>
+              <a href="#artigos" className="text-gray-700 hover:text-[#97E622] transition-colors">Artigos</a>
+              <a href="#depoimentos" className="text-gray-700 hover:text-[#97E622] transition-colors">Depoimentos</a>
             </nav>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
