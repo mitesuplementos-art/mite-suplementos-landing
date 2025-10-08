@@ -49,7 +49,7 @@ export default function SupplementsLanding() {
   }
 
   const handleWhatsAppConsultation = () => {
-    const message = `Olá! Gostaria de agendar uma consultoria personalizada.
+    const message = `Olá! Gostaria de receber uma consultoria personalizada.
     
 Meus dados:
 Nome: ${formData.name}
@@ -60,7 +60,7 @@ Experiência: ${formData.experience}
 
 Aguardo o contato!`
     
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5585989372995?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -72,7 +72,7 @@ Aguardo o contato!`
       benefits: ["25g de proteína por dose", "Absorção rápida", "Sabores naturais"]
     },
     {
-      name: "Creatina Monohidratada",
+      name: "Creatina Creapure",
       description: "Aumento de força e performance nos treinos",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
       benefits: ["Mais força", "Recuperação rápida", "Pureza garantida"]
@@ -81,7 +81,7 @@ Aguardo o contato!`
       name: "Multivitamínico Completo",
       description: "Suporte nutricional completo para sua saúde",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
-      benefits: ["26 vitaminas", "Minerais essenciais", "Energia natural"]
+      benefits: ["17 vitaminas", "Minerais essenciais", "Energia natural"]
     }
   ]
 
