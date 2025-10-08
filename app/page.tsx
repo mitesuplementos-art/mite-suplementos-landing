@@ -166,7 +166,7 @@ Aguardo o contato!`
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Suplementação
-              <span className="block text-[#B8E986]">Inteligente</span>
+              <span className="block text-[#000000]">Inteligente</span>
             </h1>
             <p className="text-xl mb-8 text-gray-100">
               Consultoria personalizada via WhatsApp para maximizar seus resultados com a suplementação ideal para seu objetivo.
@@ -329,7 +329,7 @@ Aguardo o contato!`
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article, index) => (
             <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow p-6">
-              <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+              <h3 className="text-xl font-semibold mb-2 text-black">{article.title}</h3>
               <p className="text-gray-600 mb-4">{article.excerpt}</p>
               <div className="text-sm text-gray-400">{article.readTime} de leitura</div>
             </div>
