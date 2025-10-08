@@ -240,17 +240,20 @@ Aguardo o contato!`
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <div key={index} className="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-          <img
+       <img
   src={
     product.name === "Whey Protein Premium"
       ? "https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000"
-      : product.name === "Creatina Monohidratada"
+      : product.name === "Creatina Creapure"
       ? "https://duxnutrition.vtexassets.com/arquivos/ids/167644/BANNER-01-CREATINA-CREAPURE-300-G-R02.png?v=638762748356230000"
+      : product.name === "Multivitamínico Completo"
+      ? "https://duxnutrition.vtexassets.com/arquivos/ids/167651/BANNER-01_MULTI-VITAMINICO_R02.png?v=638762758667230000"
       : product.image
   }
   alt={product.name}
   className="w-full h-48 object-cover"
 />
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                   <p className="text-white-600 mb-4">{product.description}</p>
