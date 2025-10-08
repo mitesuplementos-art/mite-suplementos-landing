@@ -188,7 +188,7 @@ Aguardo o contato!`
           </div>
           <div className="relative">
             <img
-              src="/LOGO MITE.jpg"
+              src="/images/logomite.jpg"
               alt="Suplementos de qualidade"
               className="rounded-2xl shadow-2xl"
             />
