@@ -321,21 +321,69 @@ Aguardo o contato!`
       </section>
 
       {/* Articles Section */}
-      <section id="artigos" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Artigos sobre Suplementação Inteligente</h2>
-          <p className="text-xl text-gray-600">Conteúdo educativo para você tomar decisões informadas</p>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow p-6">
-              <h3 className="text-xl font-semibold mb-2 text-black">{article.title}</h3>
-              <p className="text-gray-600 mb-4">{article.excerpt}</p>
-              <div className="text-sm text-gray-400">{article.readTime} de leitura</div>
-            </div>
-          ))}
-        </div>
-      </section>
+     <section id="artigos" className="py-20">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+      Artigos sobre Suplementação Inteligente
+    </h2>
+    <p className="text-xl text-gray-600">
+      Conteúdo educativo para você tomar decisões informadas
+    </p>
+  </div>
+
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    {/* Artigo 1 */}
+    <a
+      href="https://pubmed.ncbi.nlm.nih.gov/36725371/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow p-6 cursor-pointer active:scale-95 transform duration-100"
+    >
+      <h3 className="text-xl font-semibold mb-2 text-black">
+        Whey proteins as a functional food
+      </h3>
+      <p className="text-gray-600 mb-4">
+        Revisão que discute os efeitos antioxidantes, anti-inflamatórios e benefícios de aplicação do whey como alimento funcional. :contentReference[oaicite:0]{index=0}
+      </p>
+      <div className="text-sm text-gray-400">—</div>
+    </a>
+
+    {/* Artigo 2 */}
+    <a
+      href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8342187/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow p-6 cursor-pointer active:scale-95 transform duration-100"
+    >
+      <h3 className="text-xl font-semibold mb-2 text-black">
+        Vitamin D in athletes: focus on physical performance and musculoskeletal health
+      </h3>
+      <p className="text-gray-600 mb-4">
+        Artigo que mostra como deficiência de vitamina D pode influenciar força muscular, potência e saúde óssea em atletas. :contentReference[oaicite:1]{index=1}
+      </p>
+      <div className="text-sm text-gray-400">—</div>
+    </a>
+
+    {/* Artigo 3 */}
+    <a
+      href="https://pubmed.ncbi.nlm.nih.gov/35871954/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow p-6 cursor-pointer active:scale-95 transform duration-100"
+    >
+      <h3 className="text-xl font-semibold mb-2 text-black">
+        Effect of whey protein supplementation on weight and body composition
+      </h3>
+      <p className="text-gray-600 mb-4">
+        Meta-análise de ensaios clínicos randomizados mostrando efeitos do whey sobre peso corporal e composição corporal. :contentReference[oaicite:2]{index=2}
+      </p>
+      <div className="text-sm text-gray-400">—</div>
+    </a>
+
+  </div>
+</section>
+
 
       {/* Testimonials Section */}
       <section id="depoimentos" className="py-20 bg-gray-50">
