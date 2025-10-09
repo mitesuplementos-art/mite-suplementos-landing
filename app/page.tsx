@@ -253,26 +253,26 @@ Aguardo o contato!`
   alt={product.name}
   className="w-full h-48 object-cover"
 />
-
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                  <p className="text-white-600 mb-4">{product.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {product.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-[#97E622] mr-2" /> {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="w-full bg-[#97E622] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
-                    Consultar Preço
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<div className="p-6">
+  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+  <p className="text-white-600 mb-4">{product.description}</p>
+  <ul className="space-y-2 mb-6">
+    {product.benefits.map((benefit, idx) => (
+      <li key={idx} className="flex items-center text-sm">
+        <CheckCircle className="h-4 w-4 text-[#97E622] mr-2" /> {benefit}
+      </li>
+    ))}
+  </ul>
+  <a
+    href="https://wa.me/5515989337295?text=Ol%C3%A1%2C%20quero%20consultar%20o%20pre%C3%A7o"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="w-full bg-[#97E622] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
+      Consultar Preço
+    </button>
+  </a>
+</div>
 
       {/* Consultation Form Section */}
       <section id="consultoria" className="py-20 bg-gray-50">
