@@ -321,7 +321,7 @@ Aguardo o contato!`
       </section>
 
       {/* Articles Section */}
-     <section id="artigos" className="py-20">
+<section id="artigos" className="py-20">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
       Artigos sobre Suplementação Inteligente
@@ -344,9 +344,9 @@ Aguardo o contato!`
         Whey proteins as a functional food
       </h3>
       <p className="text-gray-600 mb-4">
-        Revisão que discute os efeitos antioxidantes, anti-inflamatórios e benefícios de aplicação do whey como alimento funcional. :contentReference[oaicite:0]{index=0}
+        Revisão que discute os efeitos antioxidantes, anti-inflamatórios e benefícios de aplicação do whey como alimento funcional.
       </p>
-      <div className="text-sm text-gray-400">—</div>
+      <div className="text-sm text-gray-400">5 min de leitura</div>
     </a>
 
     {/* Artigo 2 */}
@@ -360,9 +360,9 @@ Aguardo o contato!`
         Vitamin D in athletes: focus on physical performance and musculoskeletal health
       </h3>
       <p className="text-gray-600 mb-4">
-        Artigo que mostra como deficiência de vitamina D pode influenciar força muscular, potência e saúde óssea em atletas. :contentReference[oaicite:1]{index=1}
+        Artigo que mostra como deficiência de vitamina D pode influenciar força muscular, potência e saúde óssea em atletas.
       </p>
-      <div className="text-sm text-gray-400">—</div>
+      <div className="text-sm text-gray-400">4 min de leitura</div>
     </a>
 
     {/* Artigo 3 */}
@@ -376,14 +376,13 @@ Aguardo o contato!`
         Effect of whey protein supplementation on weight and body composition
       </h3>
       <p className="text-gray-600 mb-4">
-        Meta-análise de ensaios clínicos randomizados mostrando efeitos do whey sobre peso corporal e composição corporal. :contentReference[oaicite:2]{index=2}
+        Meta-análise de ensaios clínicos randomizados mostrando efeitos do whey sobre peso corporal e composição corporal.
       </p>
-      <div className="text-sm text-gray-400">—</div>
+      <div className="text-sm text-gray-400">6 min de leitura</div>
     </a>
 
   </div>
 </section>
-
 
       {/* Testimonials Section */}
       <section id="depoimentos" className="py-20 bg-gray-50">
