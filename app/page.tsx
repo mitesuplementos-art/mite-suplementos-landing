@@ -230,90 +230,49 @@ Aguardo o contato!`
         </div>
       </section>
 
-     import { CheckCircle } from "lucide-react";
+      {/* Products Section */}
+      <section id="produtos" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Nossos Produtos Premium</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Selecionamos apenas os melhores suplementos do mercado para garantir resultados excepcionais</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <div key={index} className="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+       <img
+  src={
+    product.name === "Whey Protein Premium"
+      ? "https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000"
+      : product.name === "Creatina Creapure"
+      ? "https://duxnutrition.vtexassets.com/arquivos/ids/167644/BANNER-01-CREATINA-CREAPURE-300-G-R02.png?v=638762748356230000"
+      : product.name === "Multivitamínico Completo"
+      ? "https://duxnutrition.vtexassets.com/arquivos/ids/167651/BANNER-01_MULTI-VITAMINICO_R02.png?v=638762758667230000"
+      : product.image
+  }
+  alt={product.name}
+  className="w-full h-48 object-cover"
+/>
 
-// Defina seu array de produtos
-const products = [
-  {
-    name: "Whey Protein Premium",
-    description: "Proteína de alta qualidade para ganho de massa muscular.",
-    benefits: ["Alta absorção", "Rico em BCAA", "Sabor incrível"],
-  },
-  {
-    name: "Creatina Creapure",
-    description: "Suplemento para força e performance.",
-    benefits: ["Aumenta força", "Mais energia", "Recuperação rápida"],
-  },
-  {
-    name: "Multivitamínico Completo",
-    description: "Suplemento com todas as vitaminas e minerais essenciais.",
-    benefits: ["Saúde geral", "Energia diária", "Sistema imunológico"],
-  },
-];
-
-export default function ProductsSection() {
-  return (
-    <section id="produtos" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Nossos Produtos Premium</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Selecionamos apenas os melhores suplementos do mercado para garantir resultados excepcionais
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <div key={index} className="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              
-              {/* Imagem do produto */}
-              <img
-                src={
-                  product.name === "Whey Protein Premium"
-                    ? "https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000"
-                    : product.name === "Creatina Creapure"
-                    ? "https://duxnutrition.vtexassets.com/arquivos/ids/167644/BANNER-01-CREATINA-CREAPURE-300-G-R02.png?v=638762748356230000"
-                    : product.name === "Multivitamínico Completo"
-                    ? "https://duxnutrition.vtexassets.com/arquivos/ids/167651/BANNER-01_MULTI-VITAMINICO_R02.png?v=638762758667230000"
-                    : product.image
-                }
-                alt={product.name}
-                className="w-full h-48 object-cover"
-              />
-
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-white">{product.name}</h3>
-                <p className="text-gray-400 mb-4">{product.description}</p>
-
-                <ul className="space-y-2 mb-6">
-                  {product.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-white">
-                      <CheckCircle className="h-4 w-4 text-[#97E622] mr-2" /> {benefit}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Botão WhatsApp */}
-                <a
-                  href={`https://wa.me/5515989337295?text=${encodeURIComponent(
-                    `Olá, quero consultar o preço do ${product.name}`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                  <p className="text-white-600 mb-4">{product.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {product.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm">
+                        <CheckCircle className="h-4 w-4 text-[#97E622] mr-2" /> {benefit}
+                      </li>
+                    ))}
+                  </ul>
                   <button className="w-full bg-[#97E622] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
                     Consultar Preço
                   </button>
-                </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
+      </section>
       
       {/* Consultation Form Section */}
       <section id="consultoria" className="py-20 bg-gray-50">
