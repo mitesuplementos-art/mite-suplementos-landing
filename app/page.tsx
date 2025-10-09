@@ -264,6 +264,11 @@ Aguardo o contato!`
                       </li>
                     ))}
                   </ul>
+                                 <a
+  href="https://wa.me/5585989372995?text=Olá,%20quero%20consultar%20o%20preço"
+  target="_blank"
+  rel="noopener noreferrer"
+>
   <button className="w-full bg-[#97E622] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
     Consultar Preço
   </button>
