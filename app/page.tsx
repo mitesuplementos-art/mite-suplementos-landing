@@ -265,7 +265,7 @@ Aguardo o contato!`
                     ))}
                   </ul>
                  <a
-  href="https://wa.me/5515989337295?text=Olá,%20quero%20consultar%20o%20preço"
+  href="https://wa.me/5585989337295?text=Olá,%20quero%20consultar%20o%20preço"
   target="_blank"
   rel="noopener noreferrer"
 >
