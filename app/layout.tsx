@@ -4,6 +4,20 @@ import { ReactNode } from 'react'
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NBVCE5J5Y"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-9NBVCE5J5Y');
+            `,
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   )
