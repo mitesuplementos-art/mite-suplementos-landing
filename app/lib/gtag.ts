@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
 export const GA_TRACKING_ID = 'G-9NBVCE5J5Y'
 
 // Registra visualização de página
