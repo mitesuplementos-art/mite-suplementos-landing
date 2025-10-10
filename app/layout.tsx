@@ -1,7 +1,6 @@
 import './globals.css'
 import { ReactNode } from 'react'
-import Analytics from '../components/Analytics' // ajuste o caminho se necessário
-
+import Analytics from '../components/Analytics' 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
