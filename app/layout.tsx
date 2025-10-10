@@ -1,6 +1,7 @@
 import './globals.css'
 import { ReactNode } from 'react'
-import Analytics from './components/Analytics' 
+import Analytics from './components/Analytics' // <-- caminho corrigido
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body>
-        <Analytics /> {/* <- aqui */}
+        <Analytics /> {/* <- componente client */}
         {children}
       </body>
     </html>
