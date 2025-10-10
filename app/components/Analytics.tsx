@@ -10,8 +10,22 @@ export default function Analytics() {
 
   useEffect(() => {
     if (!pathname) return
-    const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '')
+
+    // Track inicial
+    const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '') + window.location.hash
     gtag.pageview(url)
+
+    // Função para trackear hash changes
+    const handleHashChange = () => {
+      const urlWithHash = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '') + window.location.hash
+      gtag.pageview(urlWithHash)
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
   }, [pathname, searchParams])
 
   return null
