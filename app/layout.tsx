@@ -1,5 +1,6 @@
 import './globals.css'
 import { ReactNode } from 'react'
+import Analytics from '../components/Analytics' // ajuste o caminho se necessário
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -18,7 +19,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Analytics /> {/* <- aqui */}
+        {children}
+      </body>
     </html>
   )
 }
