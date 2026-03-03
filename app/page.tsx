@@ -60,7 +60,7 @@ Experiência: ${formData.experience}
 
 Aguardo o contato!`
     
-    const whatsappUrl = `https://wa.me/5585989372995?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5585999078920?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -265,7 +265,7 @@ Aguardo o contato!`
                     ))}
                   </ul>
                                  <a
-  href="https://wa.me/5585989372995?text=Olá,%20quero%20consultar%20o%20preço"
+  href="https://wa.me/5585999078920?text=Ol%C3%A1%2C%20quero%20consultar%20o%20pre%C3%A7o."
   target="_blank"
   rel="noopener noreferrer"
 >
@@ -431,7 +431,7 @@ Aguardo o contato!`
           </div>
           <div>
             <h4 className="font-bold text-white mb-4">Contato</h4>
-            <p className="flex items-center"><Phone className="h-4 w-4 mr-2" /> (85) 98937-2995</p>
+            <p className="flex items-center"><Phone className="h-4 w-4 mr-2" /> (85) 99907-8920</p>
             <p className="flex items-center"><Mail className="h-4 w-4 mr-2" /> contato@mitesuplementos.com.br</p>
           </div>
           <div>
