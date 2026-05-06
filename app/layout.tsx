@@ -10,11 +10,12 @@ export const metadata = {
     'suplementos fortaleza',
     'creatina',
     'whey protein',
-    'emagrecimento',
     'hipertrofia',
+    'emagrecimento',
     'loja de suplementos'
   ],
   authors: [{ name: 'Mite Suplementos' }],
+  metadataBase: new URL('https://www.mitesuplementos.com.br'),
   openGraph: {
     title: 'Mite Suplementos | Suplementação Inteligente',
     description:
@@ -28,8 +29,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* Google tag */}
+      <body>
+        {/* Google Analytics (mantido manualmente) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NBVCE5J5Y"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -41,9 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             `,
           }}
         />
-      </head>
 
-      <body>
         <Analytics />
         {children}
       </body>
