@@ -117,7 +117,7 @@ benefits: [
 name: "Ômega 3 Ultra-Concentrado",
 description: "Saúde cardiovascular e suporte cognitivo diário",
 image:
-"https://images.unsplash.com/photo-1577460551100-907fcf1a1a5d?w=400&h=300&fit=crop",
+"https://cdn.awsli.com.br/105/105301/arquivos/vitafor-omega3-primo-suplementos.png",
 benefits: [
 "Saúde do coração",
 "Ação anti-inflamatória",
@@ -129,7 +129,7 @@ benefits: [
 name: "Colágeno Hidrolisado",
 description: "Recuperação muscular otimizada para treinos intensos",
 image:
-"https://cdn.awsli.com.br/105/105301/arquivos/vitafor-omega3-primo-suplementos.png",
+"https://http2.mlstatic.com/D_NQ_NP_872624-MLB108584128803_032026-O.webp",
 benefits: [
 "Menos fadiga",
 "Recuperação muscular",
