@@ -64,26 +64,80 @@ Aguardo o contato!`
     window.open(whatsappUrl, '_blank')
   }
 
-  const products = [
-    {
-      name: "Whey Protein Premium",
-      description: "Proteína de alta qualidade para ganho de massa muscular",
-      image: "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&h=300&fit=crop",
-      benefits: ["21g de proteína por dose", "Alta Saciedade", "Sabores Exclusivos"]
-    },
-    {
-      name: "Creatina Creapure",
-      description: "Aumento de força e performance nos treinos",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      benefits: ["Mais força", "Recuperação rápida", "Pureza garantida"]
-    },
-    {
-      name: "Multivitamínico Completo",
-      description: "Suporte nutricional completo para sua saúde",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
-      benefits: ["17 vitaminas", "Minerais essenciais", "Energia natural"]
-    }
-  ]
+const products = [
+{
+name: "Whey Protein Premium",
+description: "Proteína de alta qualidade para ganho de massa muscular",
+image:
+"https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000",
+benefits: [
+"21g de proteína por dose",
+"Alta Saciedade",
+"Sabores Exclusivos"
+]
+},
+
+{
+name: "Creatina Creapure",
+description: "Aumento de força e performance nos treinos",
+image:
+"https://duxnutrition.vtexassets.com/arquivos/ids/167644/BANNER-01-CREATINA-CREAPURE-300-G-R02.png?v=638762748356230000",
+benefits: [
+"Mais força",
+"Recuperação rápida",
+"Pureza garantida"
+]
+},
+
+{
+name: "Multivitamínico Completo",
+description: "Suporte nutricional completo para sua saúde",
+image:
+"https://duxnutrition.vtexassets.com/arquivos/ids/167651/BANNER-01_MULTI-VITAMINICO_R02.png?v=638762758667230000",
+benefits: [
+"17 vitaminas",
+"Minerais essenciais",
+"Energia natural"
+]
+},
+
+{
+name: "Pré Treino Hardcore",
+description: "Energia extrema e foco para treinos intensos",
+image:
+"https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop",
+benefits: [
+"Mais energia",
+"Foco total",
+"Melhor desempenho"
+]
+},
+
+{
+name: "Ômega 3 Ultra",
+description: "Saúde cardiovascular e suporte cognitivo diário",
+image:
+"https://images.unsplash.com/photo-1577460551100-907fcf1a1a5d?w=400&h=300&fit=crop",
+benefits: [
+"Saúde do coração",
+"Ação anti-inflamatória",
+"Alta concentração"
+]
+},
+
+{
+name: "BCAA Recovery",
+description: "Recuperação muscular otimizada para treinos intensos",
+image:
+"https://images.unsplash.com/photo-1622484212850-eb596d769edc?w=400&h=300&fit=crop",
+benefits: [
+"Menos fadiga",
+"Recuperação muscular",
+"Mais resistência"
+]
+}
+]
+
 
   const testimonials: Testimonial[] = [
     {
