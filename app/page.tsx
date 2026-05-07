@@ -66,7 +66,7 @@ Aguardo o contato!`
 
 const products = [
 {
-name: "Whey Protein Premium",
+name: "Whey Protein",
 description: "Proteína de alta qualidade para ganho de massa muscular",
 image:
 "https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000",
@@ -78,7 +78,7 @@ benefits: [
 },
 
 {
-name: "Creatina Creapure",
+name: "Creatina 100% Pura",
 description: "Aumento de força e performance nos treinos",
 image:
 "https://duxnutrition.vtexassets.com/arquivos/ids/167644/BANNER-01-CREATINA-CREAPURE-300-G-R02.png?v=638762748356230000",
@@ -114,7 +114,7 @@ benefits: [
 },
 
 {
-name: "Ômega 3 Ultra",
+name: "Ômega 3 Ultra-Concentrado",
 description: "Saúde cardiovascular e suporte cognitivo diário",
 image:
 "https://images.unsplash.com/photo-1577460551100-907fcf1a1a5d?w=400&h=300&fit=crop",
@@ -126,10 +126,10 @@ benefits: [
 },
 
 {
-name: "BCAA Recovery",
+name: "Colágeno Hidrolisado",
 description: "Recuperação muscular otimizada para treinos intensos",
 image:
-"https://images.unsplash.com/photo-1622484212850-eb596d769edc?w=400&h=300&fit=crop",
+"https://cdn.awsli.com.br/105/105301/arquivos/vitafor-omega3-primo-suplementos.png",
 benefits: [
 "Menos fadiga",
 "Recuperação muscular",
