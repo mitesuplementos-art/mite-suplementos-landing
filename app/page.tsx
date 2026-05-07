@@ -66,8 +66,9 @@ Aguardo o contato!`
 
 const products = [
 {
-name: "Whey Protein",
+name: "Whey Protein DUX",
 description: "Proteína de alta qualidade para ganho de massa muscular",
+price: R$ 289,90
 image:
 "https://duxnutrition.vtexassets.com/arquivos/ids/168691/mouse-hover-0000s-0020-DUX-REBRANDING-WPC-900-G-BANNER-01-R01.png?v=638853441152230000",
 benefits: [
@@ -78,7 +79,7 @@ benefits: [
 },
 
 {
-name: "Creatina 100% Pura",
+name: "Creatina 100% Pura DUX",
 description: "Aumento de força e performance nos treinos",
 image:
 "https://duxnutrition.vtexassets.com/arquivos/ids/167644/BANNER-01-CREATINA-CREAPURE-300-G-R02.png?v=638762748356230000",
@@ -90,8 +91,9 @@ benefits: [
 },
 
 {
-name: "Multivitamínico Completo",
+name: "Multivitamínico Completo DUX",
 description: "Suporte nutricional completo para sua saúde",
+price: R$ 89,90
 image:
 "https://duxnutrition.vtexassets.com/arquivos/ids/167651/BANNER-01_MULTI-VITAMINICO_R02.png?v=638762758667230000",
 benefits: [
@@ -102,8 +104,9 @@ benefits: [
 },
 
 {
-name: "Pré Treino Hardcore",
+name: "Pré Treino Hardcore Panic",
 description: "Energia extrema e foco para treinos intensos",
+price: R$ 151,90
 image:
 "https://images.tcdn.com.br/img/img_prod/755956/panic_pre_treino_uva_300g_adaptogen_2411_1_93bfc274c486045f916aba80e477f1ab.jpeg",
 benefits: [
@@ -114,8 +117,9 @@ benefits: [
 },
 
 {
-name: "Ômega 3 Ultra-Concentrado",
+name: "Ômega 3 EPA-DHA Vitafor",
 description: "Saúde cardiovascular e suporte cognitivo diário",
+price: R$ 139,90
 image:
 "https://cdn.awsli.com.br/105/105301/arquivos/vitafor-omega3-primo-suplementos.png",
 benefits: [
@@ -126,14 +130,15 @@ benefits: [
 },
 
 {
-name: "Colágeno Hidrolisado",
-description: "Recuperação muscular otimizada para treinos intensos",
+name: "Colágeno Hidrolisado Essential",
+description: "Combate a perda natural dessa proteína a partir dos 30 anos",
+price: R$ 269,90
 image:
 "https://http2.mlstatic.com/D_NQ_NP_872624-MLB108584128803_032026-O.webp",
 benefits: [
-"Menos fadiga",
-"Recuperação muscular",
-"Mais resistência"
+"Saúde da pele",
+"Saúde dos Cabelos",
+"Saúde das Unhas"
 ]
 }
 ]
@@ -349,15 +354,10 @@ benefits: [
                       </li>
                     ))}
                   </ul>
-                                 <a
-  href="https://wa.me/5585999078920?text=Ol%C3%A1%2C%20quero%20consultar%20o%20pre%C3%A7o."
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="w-full bg-[#97E622] text-white py-3 rounded-lg font-semibold hover:bg-[#5A6B2A] transition-colors">
-    Consultar Preço
-  </button>
-</a>
+                           <a
+href="https://wa.me/5585999078920?text=Ol%C3%A1%2C%20quero%20consultar%20o%20produto."
+target="_blank"
+rel="noopener noreferrer"
                 </div>
               </div>
             ))}
