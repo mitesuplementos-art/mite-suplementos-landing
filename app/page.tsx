@@ -105,7 +105,7 @@ benefits: [
 name: "Pré Treino Hardcore",
 description: "Energia extrema e foco para treinos intensos",
 image:
-"https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop",
+"https://images.tcdn.com.br/img/img_prod/755956/panic_pre_treino_uva_300g_adaptogen_2411_1_93bfc274c486045f916aba80e477f1ab.jpeg",
 benefits: [
 "Mais energia",
 "Foco total",
