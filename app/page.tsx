@@ -160,48 +160,79 @@ Aguardo o contato!`
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#97E622] to-[#7AC81D] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Suplementação
-              <span className="block text-[#000000]">Inteligente</span>
-            </h1>
-            <p className="text-xl mb-8 text-gray-100">
-              Consultoria personalizada via WhatsApp para maximizar seus resultados com a suplementação ideal para seu objetivo.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => document.getElementById('consultoria')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-[#97E622] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" /> Consultoria Gratuita
-              </button>
-              <button
-                onClick={() => document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6B7C32] transition-colors"
-              >
-                Ver Produtos
-              </button>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/images/logomite.jpg"
-              alt="Suplementos de qualidade"
-              className="rounded-2xl shadow-2xl"
-            />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg flex items-center">
-              <Shield className="h-8 w-8 text-[#97E622] mr-3" />
-              <div>
-                <p className="font-semibold text-gray-900">100% Seguro</p>
-                <p className="text-sm text-gray-600">Produtos certificados</p>
-              </div>
-            </div>
-          </div>
+```tsx
+{/* Hero Section */}
+<section
+  className="relative text-white py-20 overflow-hidden bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://images.pexels.com/photos/14119708/pexels-photo-14119708.jpeg')",
+  }}
+>
+  {/* Overlay escuro */}
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  {/* Conteúdo */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+        Suplementação
+        <span className="block text-[#97E622]">Inteligente</span>
+      </h1>
+
+      <p className="text-xl mb-8 text-gray-100">
+        Consultoria personalizada via WhatsApp para maximizar seus resultados
+        com a suplementação ideal para seu objetivo.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <button
+          onClick={() =>
+            document
+              .getElementById('consultoria')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
+          className="bg-[#97E622] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#7AC81D] transition-colors flex items-center justify-center"
+        >
+          <MessageCircle className="mr-2 h-5 w-5" />
+          Consultoria Gratuita
+        </button>
+
+        <button
+          onClick={() =>
+            document
+              .getElementById('produtos')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
+          className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors"
+        >
+          Ver Produtos
+        </button>
+      </div>
+    </div>
+
+    <div className="relative">
+      <img
+        src="/images/logomite.jpg"
+        alt="Suplementos de qualidade"
+        className="rounded-2xl shadow-2xl"
+      />
+
+      <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg flex items-center">
+        <Shield className="h-8 w-8 text-[#97E622] mr-3" />
+
+        <div>
+          <p className="font-semibold text-gray-900">100% Seguro</p>
+          <p className="text-sm text-gray-600">
+            Produtos certificados
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
 
       {/* Benefits Section */}
       <section className="py-16 bg-gray-50">
