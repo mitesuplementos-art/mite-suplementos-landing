@@ -305,20 +305,6 @@ Aguardo o contato!`
               alt="Mite"
               className="rounded-2xl shadow-2xl"
             />
-
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg flex items-center">
-              <Shield className="h-8 w-8 text-[#97E622] mr-3" />
-
-              <div>
-                <p className="font-semibold text-gray-900">
-                  100% Seguro
-                </p>
-
-                <p className="text-sm text-gray-600">
-                  Produtos certificados
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -448,13 +434,9 @@ Aguardo o contato!`
         <div className="max-w-4xl mx-auto px-4">
 
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Consultoria Gratuita via WhatsApp
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Consultoria Gratuita
             </h2>
-
-            <p className="text-xl text-gray-600">
-              Preencha o formulário e receba orientação personalizada.
-            </p>
           </div>
 
           <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -464,37 +446,37 @@ Aguardo o contato!`
               <input
                 type="text"
                 name="name"
-                placeholder="Seu nome"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+                placeholder="Nome"
+                className="w-full px-4 py-3 border rounded-lg text-black"
               />
 
               <input
                 type="email"
                 name="email"
-                placeholder="Seu email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+                placeholder="Email"
+                className="w-full px-4 py-3 border rounded-lg text-black"
               />
 
               <input
                 type="tel"
                 name="phone"
-                placeholder="Seu WhatsApp"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+                placeholder="WhatsApp"
+                className="w-full px-4 py-3 border rounded-lg text-black"
               />
 
               <textarea
                 name="goal"
-                rows={4}
-                placeholder="Seu objetivo"
                 value={formData.goal}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+                rows={4}
+                placeholder="Seu objetivo"
+                className="w-full px-4 py-3 border rounded-lg text-black"
               />
 
               <button
@@ -502,7 +484,7 @@ Aguardo o contato!`
                 onClick={handleWhatsAppConsultation}
                 className="w-full bg-[#25D366] text-white py-4 rounded-lg font-semibold"
               >
-                Iniciar Consultoria no WhatsApp
+                Iniciar Consultoria
               </button>
 
             </form>
@@ -516,16 +498,12 @@ Aguardo o contato!`
         <div className="max-w-7xl mx-auto px-4">
 
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Depoimentos de Clientes
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Depoimentos
             </h2>
-
-            <p className="text-xl text-gray-600">
-              Veja resultados reais de clientes.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
 
             {testimonials.map((testimonial, index) => (
               <div
@@ -543,6 +521,17 @@ Aguardo o contato!`
                     <h4 className="font-semibold text-gray-900">
                       {testimonial.name}
                     </h4>
+
+                    <div className="flex">
+                      {Array.from({
+                        length: testimonial.rating
+                      }).map((_, i) => (
+                        <Star
+                          key={i}
+                          className="h-4 w-4 text-yellow-400"
+                        />
+                      ))}
+                    </div>
                   </div>
 
                 </div>
@@ -563,7 +552,7 @@ Aguardo o contato!`
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-gray-900 text-gray-300 py-12 relative">
 
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -611,26 +600,43 @@ Aguardo o contato!`
 
         </div>
 
-        {/* SEL0 */}
-        <div className="mt-10 flex justify-center">
-          <div className="bg-white rounded-xl px-6 py-4 flex items-center shadow-lg">
-            <Shield className="h-6 w-6 text-[#97E622] mr-3" />
+        <div className="flex justify-center mt-10">
+          <div className="bg-white text-black px-6 py-3 rounded-xl flex items-center shadow-lg">
+            <Shield className="h-5 w-5 text-[#97E622] mr-2" />
 
-            <div className="text-left">
-              <p className="text-black font-semibold">
-                Compra 100% Segura
-              </p>
-
-              <p className="text-gray-600 text-sm">
-                Ambiente protegido e atendimento confiável
-              </p>
-            </div>
+            <span className="font-semibold">
+              Compra 100% Segura
+            </span>
           </div>
         </div>
 
-        <div className="text-center mt-12 text-gray-500 text-sm">
+        <div className="text-center mt-8 text-gray-500 text-sm">
           © {new Date().getFullYear()} Mite Suplementos.
         </div>
+
+        <a
+          href="https://www.instagram.com/mitesupplements?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50"
+        >
+          <div className="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-1 rounded-full shadow-2xl hover:scale-110 transition-transform">
+
+            <div className="bg-black rounded-full p-3 flex items-center gap-2">
+
+              <img
+                src="/images/logo.svg"
+                alt="Instagram Mite"
+                className="w-8 h-8 rounded-full"
+              />
+
+              <span className="text-white font-semibold hidden md:block">
+                Instagram
+              </span>
+
+            </div>
+          </div>
+        </a>
 
       </footer>
 
