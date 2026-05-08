@@ -230,10 +230,6 @@ Aguardo o contato!`
                 Consultoria
               </a>
 
-              <a href="#artigos" className="text-gray-700 hover:text-[#97E622]">
-                Artigos
-              </a>
-
               <a href="#depoimentos" className="text-gray-700 hover:text-[#97E622]">
                 Depoimentos
               </a>
@@ -446,17 +442,18 @@ Aguardo o contato!`
           </div>
         </div>
       </section>
+
       {/* Consultoria */}
       <section id="consultoria" className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4">
 
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Consultoria Gratuita via WhatsApp
             </h2>
 
             <p className="text-xl text-gray-600">
-              Preencha o formulário e receba uma orientação personalizada.
+              Preencha o formulário e receba orientação personalizada.
             </p>
           </div>
 
@@ -464,108 +461,47 @@ Aguardo o contato!`
 
             <form className="space-y-6">
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                name="name"
+                placeholder="Seu nome"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+              />
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Nome Completo *
-                  </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Seu email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+              />
 
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Seu nome"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
-                  />
-                </div>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Seu WhatsApp"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+              />
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="seu@email.com"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
-                  />
-                </div>
-
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    WhatsApp *
-                  </label>
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="(11) 99999-9999"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Experiência
-                  </label>
-
-                  <select
-                    name="experience"
-                    value={formData.experience}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
-                  >
-                    <option value="">Selecione</option>
-                    <option value="iniciante">Iniciante</option>
-                    <option value="intermediario">Intermediário</option>
-                    <option value="avancado">Avançado</option>
-                  </select>
-                </div>
-
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Objetivo *
-                </label>
-
-                <textarea
-                  name="goal"
-                  value={formData.goal}
-                  onChange={handleInputChange}
-                  rows={4}
-                  required
-                  placeholder="Ex: ganhar massa muscular..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
-                />
-              </div>
+              <textarea
+                name="goal"
+                rows={4}
+                placeholder="Seu objetivo"
+                value={formData.goal}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black"
+              />
 
               <button
                 type="button"
                 onClick={handleWhatsAppConsultation}
-                disabled={
-                  !formData.name ||
-                  !formData.email ||
-                  !formData.phone ||
-                  !formData.goal
-                }
-                className="w-full bg-[#25D366] text-white py-4 rounded-lg font-semibold hover:bg-[#20BA5A] transition-colors disabled:bg-gray-400"
+                className="w-full bg-[#25D366] text-white py-4 rounded-lg font-semibold"
               >
-                <MessageCircle className="inline mr-2 h-5 w-5" />
                 Iniciar Consultoria no WhatsApp
               </button>
 
@@ -577,10 +513,10 @@ Aguardo o contato!`
       {/* Depoimentos */}
       <section id="depoimentos" className="py-20 bg-white">
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4">
 
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Depoimentos de Clientes
             </h2>
 
@@ -607,17 +543,6 @@ Aguardo o contato!`
                     <h4 className="font-semibold text-gray-900">
                       {testimonial.name}
                     </h4>
-
-                    <div className="flex">
-                      {Array.from({
-                        length: testimonial.rating
-                      }).map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-4 w-4 text-yellow-400"
-                        />
-                      ))}
-                    </div>
                   </div>
 
                 </div>
@@ -664,7 +589,7 @@ Aguardo o contato!`
 
             <p className="flex items-center">
               <Mail className="h-4 w-4 mr-2" />
-              mitesuplementos@gmail.com.br
+              mitesuplementos@gmail.com
             </p>
           </div>
 
@@ -685,14 +610,30 @@ Aguardo o contato!`
           </div>
 
         </div>
-    </div>
-      
+
+        {/* SEL0 */}
+        <div className="mt-10 flex justify-center">
+          <div className="bg-white rounded-xl px-6 py-4 flex items-center shadow-lg">
+            <Shield className="h-6 w-6 text-[#97E622] mr-3" />
+
+            <div className="text-left">
+              <p className="text-black font-semibold">
+                Compra 100% Segura
+              </p>
+
+              <p className="text-gray-600 text-sm">
+                Ambiente protegido e atendimento confiável
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="text-center mt-12 text-gray-500 text-sm">
           © {new Date().getFullYear()} Mite Suplementos.
         </div>
 
       </footer>
-          
+
     </div>
   )
 }
