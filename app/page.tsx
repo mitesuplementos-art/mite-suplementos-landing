@@ -664,7 +664,7 @@ Aguardo o contato!`
 
             <p className="flex items-center">
               <Mail className="h-4 w-4 mr-2" />
-              contato@mitesuplementos.com.br
+              mitesuplementos@gmail.com.br
             </p>
           </div>
 
@@ -685,7 +685,26 @@ Aguardo o contato!`
           </div>
 
         </div>
+    </div>
 
+        <div className="mt-8 flex justify-center">
+          <div className="bg-white text-black px-6 py-4 rounded-xl flex items-center gap-3 shadow-lg">
+
+            <Shield className="h-8 w-8 text-[#97E622]" />
+
+            <div>
+              <p className="font-bold text-sm">
+                Compra 100% Segura
+              </p>
+
+              <p className="text-xs text-gray-600">
+                Pagamentos protegidos e dados criptografados
+              </p>
+            </div>
+
+          </div>
+        </div>
+      
         <div className="text-center mt-12 text-gray-500 text-sm">
           © {new Date().getFullYear()} Mite Suplementos.
         </div>
