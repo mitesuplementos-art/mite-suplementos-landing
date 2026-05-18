@@ -263,11 +263,11 @@ Aguardo o contato!`
 
           <div>
       <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
-  Creatina a partir de
+  Creatinas a partir de
   <span className="block text-[#97E622]">
     R$ 89,90
   </span>
-  Proteína a partir de
+  Proteínas a partir de
   <span className="block text-[#97E622]">
     R$ 99,90
   </span>
