@@ -431,69 +431,84 @@ Aguardo o contato!`
         </div>
       </section>
 
-      {/* Consultoria */}
-      <section id="consultoria" className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4">
+  {/* Consultoria */}
+<section
+  id="consultoria"
+  className="relative py-24 bg-cover bg-center text-white"
+  style={{
+    backgroundImage: "url('/images/consultoria-bg.jpg')"
+  }}
+>
+  <div className="absolute inset-0 bg-black/70"></div>
 
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Consultoria Gratuita
-            </h2>
-          </div>
+  <div className="relative z-10 max-w-4xl mx-auto px-4">
 
-          <div className="bg-white rounded-2xl shadow-lg p-8">
+    <div className="text-center mb-10">
+      <h2 className="text-4xl md:text-5xl font-black mb-4">
+        Consultoria{" "}
+        <span className="text-[#97E622]">
+          Gratuita
+        </span>
+      </h2>
 
-            <form className="space-y-6">
+      <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+        Preencha os dados abaixo e receba orientação personalizada
+        via WhatsApp.
+      </p>
+    </div>
 
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder="Nome"
-                className="w-full px-4 py-3 border rounded-lg text-black"
-              />
+    <div className="bg-black/50 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl p-6 md:p-8">
 
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Email"
-                className="w-full px-4 py-3 border rounded-lg text-black"
-              />
+      <form className="space-y-5">
 
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                placeholder="WhatsApp"
-                className="w-full px-4 py-3 border rounded-lg text-black"
-              />
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleInputChange}
+          placeholder="Nome"
+          className="w-full px-4 py-4 bg-transparent border border-white/40 rounded-lg text-white placeholder-gray-300 outline-none focus:border-[#97E622]"
+        />
 
-              <textarea
-                name="goal"
-                value={formData.goal}
-                onChange={handleInputChange}
-                rows={4}
-                placeholder="Seu objetivo"
-                className="w-full px-4 py-3 border rounded-lg text-black"
-              />
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          placeholder="Email"
+          className="w-full px-4 py-4 bg-transparent border border-white/40 rounded-lg text-white placeholder-gray-300 outline-none focus:border-[#97E622]"
+        />
 
-              <button
-                type="button"
-                onClick={handleWhatsAppConsultation}
-                className="w-full bg-[#25D366] text-white py-4 rounded-lg font-semibold"
-              >
-                Iniciar Consultoria
-              </button>
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleInputChange}
+          placeholder="WhatsApp"
+          className="w-full px-4 py-4 bg-transparent border border-white/40 rounded-lg text-white placeholder-gray-300 outline-none focus:border-[#97E622]"
+        />
 
-            </form>
-          </div>
-        </div>
-      </section>
+        <textarea
+          name="goal"
+          value={formData.goal}
+          onChange={handleInputChange}
+          rows={4}
+          placeholder="Seu objetivo"
+          className="w-full px-4 py-4 bg-transparent border border-white/40 rounded-lg text-white placeholder-gray-300 outline-none focus:border-[#97E622]"
+        />
 
+        <button
+          type="button"
+          onClick={handleWhatsAppConsultation}
+          className="w-full bg-[#97E622] text-black py-4 rounded-lg font-bold hover:bg-[#7AC81D] transition-colors"
+        >
+          Iniciar Consultoria
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>
       {/* Depoimentos */}
       <section id="depoimentos" className="py-20 bg-white">
 
