@@ -262,17 +262,19 @@ Aguardo o contato!`
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
 
           <div>
-            <h1 className="text-5xl font-bold mb-6">
-              Suplementação
-              <span className="block text-[#97E622]">
-                Inteligente
-              </span>
-            </h1>
-
-            <p className="text-xl mb-8">
-              Consultoria personalizada via WhatsApp para maximizar seus resultados.
-            </p>
-
+      <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+  Creatina a partir de
+  <span className="block text-[#97E622]">
+    R$ 89,90
+  </span>
+  Proteína a partir de
+  <span className="block text-[#97E622]">
+    R$ 99,90
+  </span>
+</h1>
+           <p className="text-xl mb-8 max-w-xl">
+  Oferta especial por tempo limitado. Fale com a MITE no WhatsApp e escolha o suplemento ideal com consultoria gratuita.
+</p>
             <div className="flex gap-4 flex-wrap">
 
               <button
