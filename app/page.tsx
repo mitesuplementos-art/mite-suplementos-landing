@@ -262,7 +262,7 @@ Aguardo o contato!`
         <div className="relative z-10 max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
 
           <div>
-      <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+      <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
   Creatina a partir de
   <span className="block text-[#97E622]">
     R$ 89,90
