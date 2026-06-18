@@ -81,7 +81,7 @@ Experiência: ${formData.experience}
 
 Aguardo o contato!`
 
-    const whatsappUrl = `https://wa.me/5585999078920?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/5585989351762?text=${encodeURIComponent(
       message
     )}`
 
@@ -412,7 +412,7 @@ Aguardo o contato!`
                   </ul>
 
                   <a
-                    href={`https://wa.me/5585999078920?text=${encodeURIComponent(
+                    href={`https://wa.me/5585989351762?text=${encodeURIComponent(
                       `Olá, quero consultar o produto ${product.name}`
                     )}`}
                     target="_blank"
@@ -590,7 +590,7 @@ Aguardo o contato!`
 
             <p className="flex items-center">
               <Phone className="h-4 w-4 mr-2" />
-              (85) 99907-8920
+              (85) 98935-1762
             </p>
 
             <p className="flex items-center">
