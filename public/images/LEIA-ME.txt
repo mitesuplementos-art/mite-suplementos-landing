@@ -1,0 +1,10 @@
+Mantenha nesta pasta os arquivos que já existem no repositório:
+
+- logo.svg
+- logomite.jpg
+- consultoria-bg.jpg
+
+O novo código usa logo.svg no cabeçalho, rodapé, favicon e dados estruturados.
+Usa consultoria-bg.jpg como imagem principal. Prefira uma fotografia própria,
+em boa resolução e sem texto embutido. Depois, converta-a para WebP e atualize
+o caminho em app/page.tsx para melhorar ainda mais o carregamento.
