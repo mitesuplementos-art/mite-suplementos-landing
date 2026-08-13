@@ -307,7 +307,6 @@ export default function HomePage() {
     </div>
   </article>
 ))}
-              ))}
             </div>
 
             <p className="mt-6 text-sm text-zinc-500">
