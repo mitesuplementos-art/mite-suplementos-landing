@@ -441,7 +441,7 @@ export default function HomePage() {
           <div>
             <div className="flex items-center gap-3">
               <Image src="/images/logo.svg" alt="" width={42} height={42} />
-              <p className="text-lg font-black">Suplementos</p>
+              <p className="text-lg font-black">Mite Suplementos</p>
             </div>
             <p className="mt-4 max-w-sm leading-relaxed text-zinc-400">
               Loja on-line de suplementos com entrega grátis em Fortaleza e
