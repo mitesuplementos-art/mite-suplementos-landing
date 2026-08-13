@@ -632,7 +632,7 @@ Aguardo o contato!`
         </div>
 
         <a
-          href="https://www.instagram.com/mitesupplements?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          href="https://www.instagram.com/mitesuplementos/"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50"
