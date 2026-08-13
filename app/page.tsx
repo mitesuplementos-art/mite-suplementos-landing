@@ -242,7 +242,7 @@ export default function HomePage() {
     />
 
     {/* Overlay médio, mais escuro onde fica o texto */}
-    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-black/70 to-black/95" />
+    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/85 to-black/100" />
 
     <div className="flex flex-1 flex-col p-7">
       <span className="w-fit rounded-full bg-black/60 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-mite-green backdrop-blur-sm">
