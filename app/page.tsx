@@ -24,6 +24,7 @@ const products = [
     name: 'Creatina Max Titanium 300 g',
     category: 'Creatina',
     price: 'R$ 89,90',
+    image: '/images/creatina-max-titanium.png',
     description:
       'Creatina Max Titanium em embalagem de 300 g. Consulte estoque e condições pelo WhatsApp.',
     details: ['Embalagem de 300 g', 'Atendimento on-line'],
@@ -32,6 +33,7 @@ const products = [
     name: 'Creatina Integralmédica 300 g',
     category: 'Creatina',
     price: 'R$ 89,90',
+    image: '/images/creatina-integralmedica.png',
     description:
       'Creatina Integralmédica em embalagem de 300 g. Consulte estoque e condições pelo WhatsApp.',
     details: ['Embalagem de 300 g', 'Atendimento on-line'],
@@ -40,6 +42,7 @@ const products = [
     name: 'Caniblend 900 g',
     category: 'Proteína',
     price: 'R$ 99,90',
+    image: '/images/caniblend-900g.png',
     description:
       'Blend proteico Caniblend em embalagem de 900 g, disponível em três opções de sabor.',
     details: ['Chocolate, morango e baunilha', 'Embalagem de 900 g'],
@@ -224,69 +227,86 @@ export default function HomePage() {
             </div>
 
             <div className="grid gap-7 lg:grid-cols-3">
-              {products.map((product) => (
-                <article
-                  key={product.name}
-                  className="flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-mite-charcoal shadow-glow"
-                >
-                  <div className="border-b border-white/10 bg-[radial-gradient(circle_at_top_right,rgba(151,230,34,0.22),transparent_38%)] p-7">
-                    <span className="inline-flex rounded-full bg-mite-green/10 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-mite-green">
-                      {product.category}
-                    </span>
-                    <PackageCheck className="mt-10 h-12 w-12 text-mite-green" aria-hidden="true" />
-                  </div>
+             {products.map((product) => (
+  <article
+    key={product.name}
+    className="group relative isolate flex min-h-[540px] h-full flex-col overflow-hidden rounded-3xl border border-white/15 bg-mite-charcoal shadow-glow"
+  >
+    {/* Imagem de fundo */}
+    <Image
+      src={product.image}
+      alt=""
+      fill
+      sizes="(max-width: 1024px) 100vw, 33vw"
+      className="-z-20 object-cover object-center transition-transform duration-500 group-hover:scale-105"
+    />
 
-                  <div className="flex flex-1 flex-col p-7">
-                    <h3 className="text-2xl font-black leading-tight">{product.name}</h3>
-                    <p className="mt-4 leading-relaxed text-zinc-400">
-                      {product.description}
-                    </p>
+    {/* Overlay médio, mais escuro onde fica o texto */}
+    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-black/70 to-black/95" />
 
-                    <ul className="mt-6 space-y-3 text-sm text-zinc-300">
-                      {product.details.map((detail) => (
-                        <li key={detail} className="flex items-start gap-2">
-                          <CheckCircle2
-                            className="mt-0.5 h-4 w-4 shrink-0 text-mite-green"
-                            aria-hidden="true"
-                          />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
+    <div className="flex flex-1 flex-col p-7">
+      <span className="w-fit rounded-full bg-black/60 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-mite-green backdrop-blur-sm">
+        {product.category}
+      </span>
 
-                    <div className="mt-auto pt-8">
-                      <p className="mb-4 text-3xl font-black text-white">
-                        {product.price}
-                      </p>
-                      <TrackedLink
-                        href={createWhatsAppUrl(
-                          `Olá! Quero consultar a disponibilidade de ${product.name}.`,
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        eventName="select_item"
-                        eventParams={{
-                          item_list_name: 'Produtos em destaque',
-                          currency: 'BRL',
-                          items: [
-                            {
-                              item_name: product.name,
-                              item_category: product.category,
-                              price: Number(
-                                product.price.replace('R$ ', '').replace(',', '.'),
-                              ),
-                            },
-                          ],
-                        }}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-mite-green px-5 py-3.5 font-extrabold text-black transition hover:bg-lime-300"
-                        aria-label={`Consultar ${product.name} pelo WhatsApp`}
-                      >
-                        Consultar no WhatsApp
-                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                      </TrackedLink>
-                    </div>
-                  </div>
-                </article>
+      {/* Espaço para a imagem aparecer */}
+      <div className="h-36" aria-hidden="true" />
+
+      <h3 className="text-2xl font-black leading-tight text-white">
+        {product.name}
+      </h3>
+
+      <p className="mt-4 leading-relaxed text-zinc-200">
+        {product.description}
+      </p>
+
+      <ul className="mt-6 space-y-3 text-sm text-white">
+        {product.details.map((detail) => (
+          <li key={detail} className="flex items-start gap-2">
+            <CheckCircle2
+              className="mt-0.5 h-4 w-4 shrink-0 text-mite-green"
+              aria-hidden="true"
+            />
+            {detail}
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-auto pt-8">
+        <p className="mb-4 text-3xl font-black text-white">
+          {product.price}
+        </p>
+
+        <TrackedLink
+          href={createWhatsAppUrl(
+            `Olá! Quero consultar a disponibilidade de ${product.name}.`,
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          eventName="select_item"
+          eventParams={{
+            item_list_name: 'Produtos em destaque',
+            currency: 'BRL',
+            items: [
+              {
+                item_name: product.name,
+                item_category: product.category,
+                price: Number(
+                  product.price.replace('R$ ', '').replace(',', '.'),
+                ),
+              },
+            ],
+          }}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-mite-green px-5 py-3.5 font-extrabold text-black transition hover:bg-lime-300"
+          aria-label={`Consultar ${product.name} pelo WhatsApp`}
+        >
+          Consultar no WhatsApp
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </TrackedLink>
+      </div>
+    </div>
+  </article>
+))}
               ))}
             </div>
 
